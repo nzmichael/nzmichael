@@ -1,0 +1,21 @@
+{
+  "name": "latho-stripe",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Stripe integration for Latho Cleaning Services: card on file at booking, charge after the clean, recurring billing, Stripe Tax.",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.js",
+    "setup:catalog": "node --env-file-if-exists=.env scripts/setup-catalog.js",
+    "test": "node --test",
+    "hooks:install": "git config core.hooksPath latho-stripe/.githooks"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "5.2.1",
+    "stripe": "22.6.0"
+  }
+}
