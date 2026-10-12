@@ -1,0 +1,12 @@
+# Scan results can contain sensitive information about real systems.
+# Never commit them to Git (especially a public repository).
+reconkit-results/
+results/
+audit.log
+
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/

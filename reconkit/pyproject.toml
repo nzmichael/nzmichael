@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reconkit"
+version = "0.1.0"
+description = "A learning-focused wrapper around free security tools that explains results in plain English."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["requests>=2.31"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+# This line is what makes the `reconkit` command exist after `pip install -e .`
+# It tells pip: "create a command called reconkit that calls main() in reconkit/cli.py".
+[project.scripts]
+reconkit = "reconkit.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["reconkit*"]

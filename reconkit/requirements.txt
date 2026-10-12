@@ -1,0 +1,6 @@
+# Runtime dependency. Everything else reconkit uses is in Python's standard library
+# (argparse, subprocess, ssl, socket, xml, json), which keeps installation simple.
+requests>=2.31
+
+# Development / testing only
+pytest>=8.0
